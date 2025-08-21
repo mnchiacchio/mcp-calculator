@@ -1,12 +1,17 @@
 {
+  "type": "module",
   "name": "mcp-imagenes",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "tsc && node ./build/index.js",
     "build": "tsc && node ./build/index.js",
+    "client": "tsc && node ./build/client.js",
     "inspector": "npx @modelcontextprotocol/inspector node build/index.js"
   },
+  "files": [
+      "build"
+  ],
   "keywords": [],
   "author": "Marcos Chiacchio",
   "license": "ISC",
