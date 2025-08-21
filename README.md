@@ -19,6 +19,12 @@ MCP representa el futuro de la integración entre modelos de IA y herramientas e
 ### Recursos Dinámicos
 - 👋 **Saludos Personalizados**: Genera saludos dinámicos basados en nombres
 
+### Cliente MCP de Prueba
+- 🧪 **Cliente de Testing**: Cliente completo para probar todas las funcionalidades del servidor
+- 🔍 **Listado de Herramientas**: Visualiza todas las herramientas disponibles
+- 📋 **Listado de Recursos**: Explora los recursos dinámicos implementados
+- ⚡ **Pruebas en Tiempo Real**: Ejecuta herramientas y consulta recursos directamente
+
 ## 🛠️ Tecnologías Utilizadas
 
 - **TypeScript** - Para tipado estático y mejor experiencia de desarrollo
@@ -32,6 +38,7 @@ MCP representa el futuro de la integración entre modelos de IA y herramientas e
 MCP-Calculator/
 ├── src/
 │   ├── index.ts          # Servidor MCP principal
+│   ├── client.ts         # Cliente MCP para testing
 │   └── main/
 │       └── resources/
 │           └── banner.txt # Recursos del proyecto
@@ -62,6 +69,31 @@ npm start
 - `npm start` - Compila y ejecuta el servidor
 - `npm run build` - Compila el proyecto
 - `npm run inspector` - Ejecuta el inspector MCP para testing
+- `npm run client` - Compila y ejecuta el cliente de prueba
+
+## 🧪 **Probando tu Servidor MCP**
+
+### **Opción 1: Cliente MCP Personalizado (Recomendado)**
+```bash
+# Ejecutar el cliente de prueba (compila automáticamente)
+npm run client
+```
+
+El cliente te permitirá:
+- ✅ **Listar todas las herramientas** disponibles
+- ✅ **Listar todos los recursos** dinámicos
+- ✅ **Ejecutar herramientas** con parámetros específicos
+- ✅ **Ver respuestas en tiempo real** del servidor
+
+### **Opción 2: Inspector MCP Oficial**
+```bash
+npm run inspector
+```
+
+### **Opción 3: Ejecutar Servidor Directamente**
+```bash
+npm start
+```
 
 ## 🔍 Conceptos MCP Aprendidos
 
@@ -72,6 +104,7 @@ A través de este proyecto, he explorado:
 3. **Validación de Parámetros**: Uso de Zod para validar entradas
 4. **Manejo de Errores**: Implementación de validaciones (ej: división por cero)
 5. **Recursos Dinámicos**: Creación de recursos que pueden ser consultados
+6. **Cliente MCP**: Implementación de un cliente completo para testing
 
 ## 🌱 Este es Solo el Comienzo
 
