@@ -23,7 +23,7 @@ console.log("Prompts: ", prompts);
 const prompt = await client.getPrompt({
   name: "review-code",
   arguments: {
-    code: "console.log(\"hello\");"
+    code: "console.log(\"hola mundo\");"
   }
 });
 
@@ -41,20 +41,27 @@ for(let template of templates.resourceTemplates) {
   console.log("Resource template: ", template.name);
 }
 
-// Call a tool
+// List tools
 const tools = await client.listTools();
-for(let tool in tools.tools) {
-  console.log("Tool: ", tool);
+console.log("\n🔧 HERRAMIENTAS DISPONIBLES:");
+console.log("================================");
+if (tools.tools && tools.tools.length > 0) {
+  tools.tools.forEach((tool, index) => {
+    console.log(`${index + 1}. Nombre: ${tool.name}. Parámetros: ${JSON.stringify(tool.inputSchema.properties)}`);
+  });
+} else {
+  console.log("No hay herramientas disponibles");
 }
 
+// Probar una herramienta específica
 const ARGUMENTS = {
   a: 1,
   b: 8
 }
-console.log(`Call tool ADD with arguments ${JSON.stringify(ARGUMENTS)}`)
+console.log(`\nLlamar a ADD con argumentos: ${JSON.stringify(ARGUMENTS)}`)
 const result = await client.callTool({
   name: "add",
   arguments: ARGUMENTS
 });
 
-console.log("ADD Tool result: ", result);
+console.log("Resultado de ADD: ", result);
